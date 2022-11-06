@@ -34,9 +34,8 @@ function init() {
   // Initialize renderer
   renderer = new WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(window.innerWidth/2, window.innerHeight);
   // renderer.outputEncoding = THREE.sRGBEncoding;
-  // document.body.appendChild(renderer.domElement);
   document.getElementById('globe').appendChild(renderer.domElement);
 
   // Initialize scene, light
@@ -88,6 +87,7 @@ function init() {
   controls.rotateSpeed = 0.8;
   controls.zoomSpeed = 1;
   controls.autoRotate = true;
+//   controls.rotateSpeed = 10;
 
   controls.minPolarAngle = Math.PI / 3.5;
   controls.maxPolarAngle = Math.PI - Math.PI / 3;
