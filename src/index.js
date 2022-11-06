@@ -36,7 +36,8 @@ function init() {
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
   // renderer.outputEncoding = THREE.sRGBEncoding;
-  document.body.appendChild(renderer.domElement);
+  // document.body.appendChild(renderer.domElement);
+  document.getElementById('globe').appendChild(renderer.domElement);
 
   // Initialize scene, light
   scene = new Scene();
@@ -82,11 +83,11 @@ function init() {
   controls.enableDamping = true;
   controls.dynamicDampingFactor = 0.01;
   controls.enablePan = false;
-  controls.minDistance = 200;
-  controls.maxDistance = 500;
+  controls.minDistance = 300;
+  controls.maxDistance = 300;
   controls.rotateSpeed = 0.8;
   controls.zoomSpeed = 1;
-  controls.autoRotate = false;
+  controls.autoRotate = true;
 
   controls.minPolarAngle = Math.PI / 3.5;
   controls.maxPolarAngle = Math.PI - Math.PI / 3;
